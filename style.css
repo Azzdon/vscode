@@ -1,0 +1,213 @@
+/* Set the font and background color for the page */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #111;
+    color: #fff;
+  }
+  
+  /* Set the style for the header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+  }
+  header h1 {
+    color: #fff;
+    font-size: 48px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .logo {
+    max-width: 200px;
+  }
+  
+  .logo img {
+    max-width: 100%;
+  }
+  
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0; }
+  
+  /* Set the style for the image container */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  /* Set the style for each image */
+  .image {
+    width: 30%;
+    margin: 10px;
+    padding: 10px;
+    background-color: #222;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px #000;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Set the style for the image title and description */
+
+
+  .image h2 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .image p {
+    font-size: 0.9rem;
+  }
+  
+  /* Set the style for the image on hover */
+  .image:hover {
+    transform: scale(1.05);
+  }
+  
+  .image:hover img {
+    opacity: 0.6;
+  }
+  
+  .image:hover .overlay {
+    opacity: 1;
+  }
+  
+  .image img {
+    max-width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Set the style for the overlay */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .overlay h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .overlay a {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .overlay a:hover {
+    background-color: #000;
+    color: #fff;
+  }
+ 
+  /* Mouvement de fluide "Vortex" */
+
+.container {
+    position: relative;
+  }
+  
+  .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: radial-gradient(circle, #ff00ff, #00ffff, #ff0000);
+    animation-name: vortex;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes vortex {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .nebula {
+    background-image: url('https://i.imgur.com/x4C0e1s.png');
+    background-size: cover;
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+  }
+  
+  .nebula::after {
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, 0.05);
+    width: 3000px;
+    height: 3000px;
+    border-radius: 50%;
+    top: -1500px;
+    left: -10%;
+    animation: animate 50s linear infinite;
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: translate(-50%, -1500px);
+      opacity: 0;
+    }
+    50% {
+      transform: translate(-50%, 1500px);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%, 4500px);
+      opacity: 0;
+    }
+  }
+  .list {
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
